@@ -1,5 +1,3 @@
-// __tests__/app.test.ts
-
 import request from 'supertest';
 import app from '../src/app';
 import Movie from '../src/Movie';
@@ -120,4 +118,4 @@ describe('DELETE /movies/:id', () => {
   });
 });
 
-// Write similar tests for other endpoints
+

@@ -1,5 +1,3 @@
-// src/app.ts
-
 import express, { Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
@@ -23,7 +21,7 @@ app.get('/movies', async (req: Request, res: Response) => {
   try {
     const movies = await Movie.find();
     res.json(movies);
-  } catch (err) {    
+  } catch (err) {
     if (err instanceof Error) {
       // ✅ TypeScript knows err is Error
       res.status(500).json({ message: err.message });
@@ -41,9 +39,9 @@ app.get('/search', async (req: Request, res: Response) => {
       $or: [{ title: { $regex: q, $options: 'i' } }, { genre: { $regex: q, $options: 'i' } }],
     });
     res.json(movies);
-  } catch (err) {    
+  } catch (err) {
     if (err instanceof Error) {
-      // ✅ TypeScript knows err is Error
+
       res.status(500).json({ message: err.message });
     } else {
       console.log('Unexpected error', err);
@@ -57,9 +55,9 @@ app.post('/movies', async (req: Request, res: Response) => {
   try {
     const newMovie = await movie.save();
     res.status(201).json(newMovie);
-  } catch (err) {    
+  } catch (err) {
     if (err instanceof Error) {
-      // ✅ TypeScript knows err is Error
+
       res.status(400).json({ message: err.message });
     } else {
       console.log('Unexpected error', err);
@@ -73,9 +71,8 @@ app.put('/movies/:id', async (req: Request, res: Response) => {
   try {
     const updatedMovie = await Movie.findByIdAndUpdate(id, req.body, { new: true });
     res.json(updatedMovie);
-  } catch (err) {    
+  } catch (err) {
     if (err instanceof Error) {
-      // ✅ TypeScript knows err is Error
       res.status(400).json({ message: err.message });
     } else {
       console.log('Unexpected error', err);
@@ -89,9 +86,8 @@ app.delete('/movies/:id', async (req: Request, res: Response) => {
   try {
     await Movie.findByIdAndDelete(id);
     res.json({ message: 'Movie deleted successfully' });
-  } catch (err) {    
+  } catch (err) {
     if (err instanceof Error) {
-      // ✅ TypeScript knows err is Error
       res.status(400).json({ message: err.message });
     } else {
       console.log('Unexpected error', err);

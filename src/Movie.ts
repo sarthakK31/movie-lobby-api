@@ -1,5 +1,3 @@
-// src/Movie.ts
-
 import mongoose, { Schema, Document } from 'mongoose';
 
 export interface IMovie extends Document {
