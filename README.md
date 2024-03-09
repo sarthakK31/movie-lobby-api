@@ -116,3 +116,13 @@ Since I had never used Jest before today, I tried using it at your behest but ho
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## Some Screenshots of Postman Testing and Results
+
+
+
+![](https://github.com/sarthakK31/movie-lobby-api/blob/main/images/Screenshot%202024-03-09%20214221.png)
+![](https://github.com/sarthakK31/movie-lobby-api/blob/main/images/Screenshot%202024-03-09%20214352.png)
+![](https://github.com/sarthakK31/movie-lobby-api/blob/main/images/Screenshot%202024-03-09%20214511.png)
+![](https://github.com/sarthakK31/movie-lobby-api/blob/main/images/Screenshot%202024-03-09%20214655.png)
+![](https://github.com/sarthakK31/movie-lobby-api/blob/main/images/Screenshot%202024-03-09%20214940.png)
