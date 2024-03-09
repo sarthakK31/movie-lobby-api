@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.ts",
+  "type": "module",
   "scripts": {
+    "start": "npx tsx src/app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -33,6 +35,7 @@
     "supertest": "^6.3.4",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
+    "tsx": "^4.7.1",
     "typescript": "^5.4.2"
   }
 }

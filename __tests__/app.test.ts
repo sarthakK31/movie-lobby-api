@@ -58,27 +58,6 @@ describe('GET /search', () => {
   });
 });
 
-// describe('POST /movies', () => {
-//   it('should respond with status 201 and create a new movie', async () => {
-//     const newMovie = {
-//       title: 'New Movie',
-//       genre: 'Drama',
-//       rating: 9.0,
-//       streamingLink: 'https://example.com/new-movie',
-//     };
-
-//     // Mock Movie.save() to return the new movie
-//     (Movie.prototype.save as jest.Mock).mockResolvedValue(newMovie);
-
-//     const response = await request(app)
-//       .post('/movies')
-//       .send(newMovie);
-
-//     expect(response.status).toBe(201);
-//     expect(response.body).toEqual(newMovie);
-//   });
-// });
-
 describe('POST /movies', () => {
   beforeEach(() => {
     // Reset mocks before each test
